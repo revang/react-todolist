@@ -22,7 +22,7 @@ class TodoList extends React.Component {
           <button onClick={this.handleBtnClick.bind(this)}>add</button>
         </div>
         <ul>
-          {this.state.list.map((item) => { return <li>{item}</li> })}
+          {this.state.list.map((item, index) => { return <li key={index}>{item}</li> })}
         </ul>
       </div>
     );
