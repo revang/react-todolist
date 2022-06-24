@@ -24,10 +24,9 @@ class TodoList extends React.Component {
   }
 
   handleDelete(index) {
-    console.log(index)
     const list = [...this.state.list]
     list.splice(index, 1)
-    this.setState({ list }) // list: list 可以缩写为list
+    this.setState({ list })
   }
 
   render() {
