@@ -31,6 +31,10 @@ class TodoList extends React.Component {
     })
   }
 
+  handleDelete() {
+    console.log('delete')
+  }
+
   render() {
     return (
       <div>
@@ -39,7 +43,7 @@ class TodoList extends React.Component {
           <button onClick={this.handleBtnClick.bind(this)}>add</button>
         </div>
         <ul>
-          {this.state.list.map((item, index) => { return <TodoItem key={index} content={item} index={index} /> })}
+          {this.state.list.map((item, index) => { return <TodoItem key={index} delete={this.handleDelete.bind(this)} content={item} index={index} /> })}
         </ul>
       </div>
     );
