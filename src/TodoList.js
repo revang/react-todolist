@@ -43,13 +43,13 @@ class TodoList extends React.Component {
 
   render() {
     return (
-      <div>
+      <React.Fragment>
         <div>
           <input value={this.state.inputValue} onChange={this.handleInputChange} />
           <button onClick={this.handleBtnClick} className='red-btn'>add</button>
         </div>
         <ul>{this.getTodoItems()}</ul>
-      </div>
+      </React.Fragment>
     );
   }
 }
