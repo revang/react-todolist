@@ -41,7 +41,7 @@ class TodoList extends React.Component {
           <button onClick={this.handleBtnClick}>add</button>
         </div>
         <ul>
-          {this.state.list.map((item, index) => { return <TodoItem key={index} delete={this.handleDelete} content={item} index={index} /> })}
+          {this.state.list.map((item, index) => { return <TodoItem key={index} deleteItem={this.handleDelete} content={item} index={index} /> })}
         </ul>
       </div>
     );
