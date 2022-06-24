@@ -1,3 +1,5 @@
+const state = { list: ['learn react', 'learn english', 'learn vue'] }
+
 function handleBtnClick() {
   alert('click');
 }
@@ -10,8 +12,7 @@ function TodoList() {
         <button onClick={handleBtnClick}>add</button>
       </div>
       <ul>
-        <li>learn react</li>
-        <li>learn english</li>
+        {state.list.map((item) => { return <li>{item}</li> })}
       </ul>
     </div>
   );
