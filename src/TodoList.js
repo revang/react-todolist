@@ -23,7 +23,12 @@ class TodoList extends React.Component {
   }
 
   handleItemClick(index) {
-    console.log(index)
+    this.state.list.splice(index, 1) // 不推荐使用这种方法，不方便跟踪问题
+    // const list = [...this.state.list]
+    // list.splice(index, 1)
+    this.setState({
+      list: [...this.state.list]
+    })
   }
 
   render() {
