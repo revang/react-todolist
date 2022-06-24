@@ -1,4 +1,4 @@
-function App() {
+function TodoList() {
   return (
     <div>
       hell, i am revang
@@ -6,4 +6,4 @@ function App() {
   );
 }
 
-export default App;
+export default TodoList;
