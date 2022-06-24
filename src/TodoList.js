@@ -1,7 +1,14 @@
 function TodoList() {
   return (
     <div>
-      hell, i am revang
+      <div>
+        <input />
+        <button>add</button>
+      </div>
+      <ul>
+        <li>learn react</li>
+        <li>learn english</li>
+      </ul>
     </div>
   );
 }
