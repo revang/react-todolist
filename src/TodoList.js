@@ -33,6 +33,14 @@ class TodoList extends React.Component {
     this.setState({ list })
   }
 
+  getTodoItems() {
+    return (
+      this.state.list.map((item, index) => {
+        return <TodoItem key={index} deleteItem={this.handleDelete} content={item} index={index} />
+      })
+    )
+  }
+
   render() {
     return (
       <div>
@@ -40,9 +48,7 @@ class TodoList extends React.Component {
           <input value={this.state.inputValue} onChange={this.handleInputChange} />
           <button onClick={this.handleBtnClick}>add</button>
         </div>
-        <ul>
-          {this.state.list.map((item, index) => { return <TodoItem key={index} deleteItem={this.handleDelete} content={item} index={index} /> })}
-        </ul>
+        <ul>{this.getTodoItems()}</ul>
       </div>
     );
   }
