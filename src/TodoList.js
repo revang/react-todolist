@@ -4,7 +4,8 @@ class TodoList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      list: ['learn react', 'learn english', 'learn vue']
+      list: ['learn react', 'learn english', 'learn vue'],
+      inputValue: ''
     }
   }
 
@@ -14,11 +15,15 @@ class TodoList extends React.Component {
     })
   }
 
+  handleInputChange(e) {
+    console.log(e.target.value)
+  }
+
   render() {
     return (
       <div>
         <div>
-          <input />
+          <input onChange={this.handleInputChange} />
           <button onClick={this.handleBtnClick.bind(this)}>add</button>
         </div>
         <ul>
