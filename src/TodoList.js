@@ -23,16 +23,12 @@ class TodoList extends React.Component {
     })
   }
 
-  handleItemClick(index) {
+  handleDelete(index) {
     const list = [...this.state.list]
     list.splice(index, 1)
     this.setState({
       list: [...this.state.list]
     })
-  }
-
-  handleDelete() {
-    console.log('delete')
   }
 
   render() {
