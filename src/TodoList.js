@@ -1,21 +1,32 @@
-const state = { list: ['learn react', 'learn english', 'learn vue'] }
+import React from "react";
 
-function handleBtnClick() {
-  alert('click');
-}
+class TodoList extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      list: ['learn react', 'learn english', 'learn vue']
+    }
+  }
 
-function TodoList() {
-  return (
-    <div>
+  handleBtnClick() {
+    this.setState({
+      list: [...this.state.list, 'hello world']
+    })
+  }
+
+  render() {
+    return (
       <div>
-        <input />
-        <button onClick={handleBtnClick}>add</button>
+        <div>
+          <input />
+          <button onClick={this.handleBtnClick.bind(this)}>add</button>
+        </div>
+        <ul>
+          {this.state.list.map((item) => { return <li>{item}</li> })}
+        </ul>
       </div>
-      <ul>
-        {state.list.map((item) => { return <li>{item}</li> })}
-      </ul>
-    </div>
-  );
+    );
+  }
 }
 
 export default TodoList;
