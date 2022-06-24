@@ -3,7 +3,7 @@ import React from "react";
 class TodoItem extends React.Component {
 
     handleDelete() {
-        console.log(123)
+        console.log(this.props.index)
     }
 
     render() {
