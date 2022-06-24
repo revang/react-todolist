@@ -46,7 +46,7 @@ class TodoList extends React.Component {
       <div>
         <div>
           <input value={this.state.inputValue} onChange={this.handleInputChange} />
-          <button onClick={this.handleBtnClick} style={{ background: 'red', color: '#fff' }}>add</button>
+          <button onClick={this.handleBtnClick} className='red-btn'>add</button>
         </div>
         <ul>{this.getTodoItems()}</ul>
       </div>
