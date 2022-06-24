@@ -1,9 +1,13 @@
+function handleBtnClick() {
+  alert('click');
+}
+
 function TodoList() {
   return (
     <div>
       <div>
         <input />
-        <button>add</button>
+        <button onClick={handleBtnClick}>add</button>
       </div>
       <ul>
         <li>learn react</li>
